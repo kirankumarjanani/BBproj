@@ -1,47 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="77736" started-at="2017-12-19T18:23:23Z" finished-at="2017-12-19T18:24:40Z">
+  <suite name="Default suite" duration-ms="111941" started-at="2017-12-25T17:12:13Z" finished-at="2017-12-25T17:14:05Z">
     <groups>
-      <group name="smoke">
-        <method signature="Scenario_cart.testAddcart(java.util.Map)[pri:0, instance:Scenario_search.Scenario_cart@912008]" name="testAddcart" class="Scenario_search.Scenario_cart"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Test" duration-ms="77736" started-at="2017-12-19T18:23:23Z" finished-at="2017-12-19T18:24:40Z">
-      <class name="Scenario_search.Scenario_cart">
-        <test-method status="FAIL" signature="testAddcart(java.util.Map)[pri:0, instance:Scenario_search.Scenario_cart@912008]" name="testAddcart" duration-ms="77436" started-at="2017-12-19T23:53:23Z" data-provider="dp_AddCart" finished-at="2017-12-19T23:54:40Z">
+    <test name="Default test" duration-ms="111941" started-at="2017-12-25T17:12:13Z" finished-at="2017-12-25T17:14:05Z">
+      <class name="Scenario_search.scenario_class">
+        <test-method status="PASS" signature="TestInvalidSerch(java.util.Map)[pri:0, instance:Scenario_search.scenario_class@78d6c6]" name="TestInvalidSerch" duration-ms="55830" started-at="2017-12-25T22:42:13Z" data-provider="dp_Invalidsearch" finished-at="2017-12-25T22:43:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Order_Set=1.0, Quantity=1.0, Exp_Result=Raw Mango - Diced, Search_Item=Raw Mango - Diced, TC_ID=GB_05, Script_name=Add_Cart, Execute_Flag=Y}]]>
+                <![CDATA[{Order_Set=1.0, Exp_Result=Sorry! There are no products to display., Search_Item=###, TC_ID=GB_01, Script_name=Invalid_Search, Execute_Flag=Y}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestInvalidSerch -->
+        <test-method status="FAIL" signature="TestValidSerch(java.util.Map)[pri:0, instance:Scenario_search.scenario_class@78d6c6]" name="TestValidSerch" duration-ms="55756" started-at="2017-12-25T22:43:09Z" data-provider="dp_Validsearch" finished-at="2017-12-25T22:44:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Order_Set=1.0, Exp_Result=14.0, Search_Item=Johnson powder, TC_ID=GB_04, Script_name=Valid_Search, Execute_Flag=Y}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Timed out after 25 seconds waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: com.bigbasket.mobileapp:id/cartcountView'
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'TOSHIBA', ip: '192.168.1.6', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.7.0_79'
-Session ID: 9e47823f-8d47-4fd0-ab1f-25b8388272ee
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{platform=ANDROID, javascriptEnabled=true, appActivity=com.bigbasket.mobileapp.activity.SplashActivity, browserName=android, networkConnectionEnabled=true, desired={platformVersion=6.0, platform=ANDROID, platformName=Android, deviceName=Lenovo K50a40, appActivity=com.bigbasket.mobileapp.activity.SplashActivity, browserName=android, appPackage=com.bigbasket.mobileapp, version=}, locationContextEnabled=false, appPackage=com.bigbasket.mobileapp, version=, platformVersion=6.0, databaseEnabled=false, deviceName=AQ75NVCYEUZ975VK, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]]]>
+              <![CDATA[The following asserts failed:
+null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 25 seconds waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: com.bigbasket.mobileapp:id/cartcountView'
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'TOSHIBA', ip: '192.168.1.6', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.7.0_79'
-Session ID: 9e47823f-8d47-4fd0-ab1f-25b8388272ee
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{platform=ANDROID, javascriptEnabled=true, appActivity=com.bigbasket.mobileapp.activity.SplashActivity, browserName=android, networkConnectionEnabled=true, desired={platformVersion=6.0, platform=ANDROID, platformName=Android, deviceName=Lenovo K50a40, appActivity=com.bigbasket.mobileapp.activity.SplashActivity, browserName=android, appPackage=com.bigbasket.mobileapp, version=}, locationContextEnabled=false, appPackage=com.bigbasket.mobileapp, version=, platformVersion=6.0, databaseEnabled=false, deviceName=AQ75NVCYEUZ975VK, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
-	at Generic.Base_class.Explicit_wait(Base_class.java:88)
-	at Scenario_search.Scenario_cart.testAddcart(Scenario_cart.java:39)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+null
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
+	at Scenario_search.scenario_class.TestValidSerch(scenario_class.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
@@ -62,42 +60,13 @@ Capabilities [{platform=ANDROID, javascriptEnabled=true, appActivity=com.bigbask
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 81 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'TOSHIBA', ip: '192.168.1.6', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.7.0_79'
-*** Element info: {Using=id, value=com.bigbasket.mobileapp:id/cartcountView}
-Session ID: 9e47823f-8d47-4fd0-ab1f-25b8388272ee
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{platform=ANDROID, javascriptEnabled=true, appActivity=com.bigbasket.mobileapp.activity.SplashActivity, browserName=android, networkConnectionEnabled=true, desired={platformVersion=6.0, platform=ANDROID, platformName=Android, deviceName=Lenovo K50a40, appActivity=com.bigbasket.mobileapp.activity.SplashActivity, browserName=android, appPackage=com.bigbasket.mobileapp, version=}, locationContextEnabled=false, appPackage=com.bigbasket.mobileapp, version=, platformVersion=6.0, databaseEnabled=false, deviceName=AQ75NVCYEUZ975VK, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]
-	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
-	... 26 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddcart -->
-      </class> <!-- Scenario_search.Scenario_cart -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- TestValidSerch -->
+      </class> <!-- Scenario_search.scenario_class -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

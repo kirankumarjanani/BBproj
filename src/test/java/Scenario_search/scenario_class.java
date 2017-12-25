@@ -13,7 +13,7 @@ import Pomdesign.Pom_class;
 public class scenario_class extends Base_class {
 public static Logger log=Logger.getLogger(scenario_class.class);
 	
-	@Test(dataProvider="dp_Invalidsearch", dataProviderClass=Dataprovider.Dataproviderclass.class)
+	@Test(dataProvider="dp_Invalidsearch", dataProviderClass=Dataprovider.Dataproviderclass.class,groups={"smoke"})
 	public void TestInvalidSerch(Map<String,String> Search) throws IOException, InterruptedException
 	{
 		String TC_ID = Search.get("TC_ID");
@@ -56,7 +56,7 @@ public static Logger log=Logger.getLogger(scenario_class.class);
 		
 	}
 	
-@Test(dataProvider="dp_Validsearch", dataProviderClass=Dataprovider.Dataproviderclass.class)	
+@Test(dataProvider="dp_Validsearch", dataProviderClass=Dataprovider.Dataproviderclass.class,groups={"Regression"})	
 	public void TestValidSerch(Map<String,String> search) throws IOException, InterruptedException
 	{
 	SoftAssert sassert=new SoftAssert();

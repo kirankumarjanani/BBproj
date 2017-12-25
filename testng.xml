@@ -19,7 +19,7 @@
 </groups>
     <classes>
       
-      <class name="Scenario_search.Scenario_cart"/>
+      <class name="Scenario_search.scenario_class"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

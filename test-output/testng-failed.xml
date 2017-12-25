@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-  </listeners>
-  <test name="Test(failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-        <exclude name="Regression"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="Scenario_search.Scenario_cart">
+      <class name="Scenario_search.scenario_class">
         <methods>
-          <include name="testAddcart" invocation-numbers="0"/>
+          <include name="TestValidSerch" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Scenario_search.Scenario_cart -->
+      </class> <!-- Scenario_search.scenario_class -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

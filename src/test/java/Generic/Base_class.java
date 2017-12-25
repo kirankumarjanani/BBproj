@@ -1,15 +1,14 @@
 package Generic;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-import org.apache.maven.shared.utils.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import java.io.IOException;
+
+
+
+
+
+import java.net.URL;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -69,19 +68,19 @@ public class Base_class {
 		
 		
 	}
-	public void Capture_screenshot(String TC_ID,String Order_set) throws IOException{
-		
-		Date date=new Date();
-		SimpleDateFormat df=new SimpleDateFormat("yyyy-mm-dd hh=mm-ss");
-		String str=df.format(date)+".png";
-		TakesScreenshot screen=(TakesScreenshot)driver;
-		File screenshotAs = screen.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyDirectory(screenshotAs, new File("‪F:\\screenshot"+TC_ID+"-"+Order_set+"-"+str));
-		
-		
-		
-	}
-	
+//	public void Capture_screenshot(String TC_ID,String Order_set) throws IOException{
+//		
+//		Date date=new Date();
+//		SimpleDateFormat df=new SimpleDateFormat("yyyy-mm-dd hh=mm-ss");
+//		String str=df.format(date)+".png";
+//		TakesScreenshot screen=(TakesScreenshot)driver;
+//		File screenshotAs = screen.getScreenshotAs(OutputType.FILE);
+//		FileUtils.copyDirectory(screenshotAs, new File("‪F:\\screenshot"+TC_ID+"-"+Order_set+"-"+str));
+//		
+//		
+//		
+//	}
+//	
 	public void Explicit_wait(WebElement ele,long T1)
 	{
 		WebDriverWait wait= new WebDriverWait(driver, T1);
